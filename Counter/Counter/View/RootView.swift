@@ -9,20 +9,49 @@ import SwiftUI
 
 struct RootView: View {
     @StateObject private var model = CounterModel()
-
+    
     var body: some View {
-        TabView {
-            ObservedObjectView(model: model)
-                .tabItem { Label("ob", systemImage: "1.circle")}
-            EnvironmentObjectView()
-                .tabItem { Label("EN", systemImage: "2.circle")}
-                .environmentObject(model)
-            StateObjectView()
-                .tabItem { Label("ST", systemImage: "3.circle")}
-            BindingView(count: $model.count)
-                .tabItem { Label("BD", systemImage: "4.circle")}
-            StateView()
-                .tabItem { Label("State", systemImage: "5.circle")}
+        
+        VStack {
+            TabView {
+                NavigationView {
+                    List {
+                        NavigationLink("ObservedObject View") {
+                            ObservedObjectView(model: model)
+                        }
+                        
+                        NavigationLink("EnvironmentObject View") {
+                            EnvironmentObjectView()
+                                .environmentObject(model)
+                        }
+                        
+                        NavigationLink("StateObject View") {
+                            StateObjectView()
+                        }
+                        
+                        NavigationLink("Binding View") {
+                            BindingView(count: $model.count)
+                        }
+                        
+                        NavigationLink("State View") {
+                            StateView()
+                        }
+                    }
+                    .navigationTitle("State Management")
+                }
+                    .tabItem { Label("1", systemImage: "1.circle")}
+                VStack {
+                    ObservedObjectView(model: model)
+                    EnvironmentObjectView()
+                        .environmentObject(model)
+                    StateObjectView()
+                    BindingView(count: $model.count)
+                    StateView()
+                }
+                .tabItem { Label("2", systemImage: "2.circle")}
+                
+            }
+            
         }
     }
 }

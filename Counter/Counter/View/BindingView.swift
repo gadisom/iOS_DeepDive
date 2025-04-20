@@ -9,10 +9,10 @@ import SwiftUI
 
 struct BindingView: View {
     @Binding var count: Int
-   
+    
     var body: some View {
-        
-        VStack {
+        print("BindingView 다시 그려짐")
+        return VStack {
             Text("💡@Binding 사용 뷰.")
                 .foregroundColor(.gray)
                 .padding()

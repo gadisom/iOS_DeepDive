@@ -9,9 +9,10 @@ import SwiftUI
 
 struct EnvironmentObjectView: View {
     @EnvironmentObject var model: CounterModel
-  
+
     var body: some View {
-        VStack {
+        print("EnvironmentView 다시 그려짐")
+        return VStack {
             Text("💡@EnvironmentObject 사용 뷰.")
                 .foregroundColor(.gray)
                 .padding()

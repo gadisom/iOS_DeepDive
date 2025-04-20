@@ -11,8 +11,8 @@ struct ObservedObjectView: View {
     @ObservedObject var model: CounterModel
     
     var body: some View {
-        
-       VStack {
+        print("ObservedObjectView 다시 그려짐")
+        return VStack {
             Text("💡@ObservedObject를 사용 뷰.")
                 .foregroundColor(.gray)
                 .padding()
