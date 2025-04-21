@@ -9,9 +9,9 @@ import SwiftUI
 
 struct StateObjectView: View {
     @StateObject private var model = CounterModel()
-    
+
     var body: some View {
-        print("StateObjectView 다시 그려짐")
+        print("🔁 StateObjectView ")
         return VStack {
             Text("💡@StateObject 사용 뷰.")
                 .foregroundColor(.gray)

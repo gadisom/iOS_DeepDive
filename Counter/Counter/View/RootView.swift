@@ -9,51 +9,56 @@ import SwiftUI
 
 struct RootView: View {
     @StateObject private var model = CounterModel()
-    
+    init() {
+        print("🟦 RootView init")
+    }
     var body: some View {
-        
-        VStack {
-            TabView {
-                NavigationView {
-                    List {
-                        NavigationLink("ObservedObject View") {
-                            ObservedObjectView(model: model)
-                        }
-                        
-                        NavigationLink("EnvironmentObject View") {
-                            EnvironmentObjectView()
-                                .environmentObject(model)
-                        }
-                        
-                        NavigationLink("StateObject View") {
-                            StateObjectView()
-                        }
-                        
-                        NavigationLink("Binding View") {
-                            BindingView(count: $model.count)
-                        }
-                        
-                        NavigationLink("State View") {
-                            StateView()
-                        }
+        print("🔁 RootView")
+        return TabView {
+            NavigationView {
+                List {
+                    NavigationLink("ObservedObject View") {
+                        ObservedObjectView(model: model)
                     }
-                    .navigationTitle("State Management")
+                    
+                    NavigationLink("EnvironmentObject View") {
+                        EnvironmentObjectView()
+                            .environmentObject(model)
+                    }
+                    
+                    NavigationLink("StateObject View") {
+                        StateObjectView()
+                    }
+                    
+                    NavigationLink("Binding View") {
+                        BindingView(count: $model.count)
+                    }
+                    
+                    NavigationLink("State View") {
+                        StateView()
+                    }
                 }
-                    .tabItem { Label("1", systemImage: "1.circle")}
-                VStack {
-                    ObservedObjectView(model: model)
-                    EnvironmentObjectView()
-                        .environmentObject(model)
-                    StateObjectView()
-                    BindingView(count: $model.count)
-                    StateView()
-                }
-                .tabItem { Label("2", systemImage: "2.circle")}
-                
+                .navigationTitle("State Management")
             }
+            .tabItem { Label("1", systemImage: "1.circle")}
+            VStack {
+                ObservedObjectView(model: model)
+                Divider()
+                EnvironmentObjectView()
+                    .environmentObject(model)
+                Divider()
+                StateObjectView()
+                Divider()
+                BindingView(count: $model.count)
+                Divider()
+                StateView()
+            }
+            .tabItem { Label("2", systemImage: "2.circle")}
             
         }
+        
     }
+    
 }
 
 #Preview {

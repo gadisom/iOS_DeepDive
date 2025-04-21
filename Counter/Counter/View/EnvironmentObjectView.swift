@@ -11,7 +11,7 @@ struct EnvironmentObjectView: View {
     @EnvironmentObject var model: CounterModel
 
     var body: some View {
-        print("EnvironmentView 다시 그려짐")
+        print("🔁 EnvView body")
         return VStack {
             Text("💡@EnvironmentObject 사용 뷰.")
                 .foregroundColor(.gray)

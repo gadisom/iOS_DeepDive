@@ -11,7 +11,7 @@ struct StateView: View {
     @State private var count = 0
 
     var body: some View {
-        print("StateView 다시 그려짐")
+        print("🔁 StateView ")
         return VStack {
             Text("💡@State 사용 뷰.")
                 .foregroundColor(.gray)

@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ObservedObjectView: View {
     @ObservedObject var model: CounterModel
-    
+
     var body: some View {
-        print("ObservedObjectView 다시 그려짐")
+        print("🔁 ObservedObjectView")
         return VStack {
             Text("💡@ObservedObject를 사용 뷰.")
                 .foregroundColor(.gray)
