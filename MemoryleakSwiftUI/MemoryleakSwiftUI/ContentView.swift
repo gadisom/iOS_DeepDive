@@ -8,15 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var isShowSheet: Bool = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(spacing: 20) {
+            Button("New Sheet") {
+                isShowSheet.toggle()
+            }
+            .font(.title)
+            .padding()
         }
-        .padding()
+        .sheet(isPresented: $isShowSheet) {
+            SheetView()
+        }
     }
+    
 }
 
 #Preview {
