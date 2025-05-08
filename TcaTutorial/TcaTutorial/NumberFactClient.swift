@@ -12,7 +12,6 @@ struct NumberFactClient {
   var fetch: (Int) async throws -> String
 }
 
-
 extension NumberFactClient: DependencyKey {
   static let liveValue = Self(
     fetch: { number in
@@ -23,13 +22,9 @@ extension NumberFactClient: DependencyKey {
   )
 }
 
-
-
 extension DependencyValues {
   var numberFact: NumberFactClient {
     get { self[NumberFactClient.self] }
     set { self[NumberFactClient.self] = newValue }
   }
 }
-
-
