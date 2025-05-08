@@ -10,7 +10,18 @@
 		BD99B26A2DC79765009229E9 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = BD99B2692DC79765009229E9 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BD1770F02DC8CB1E00141F17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD99B24F2DC7971B009229E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD99B2562DC7971C009229E9;
+			remoteInfo = TcaTutorial;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		BD1770EC2DC8CB1E00141F17 /* TcaTutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TcaTutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD99B2572DC7971C009229E9 /* TcaTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TcaTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -25,6 +36,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		BD1770ED2DC8CB1E00141F17 /* TcaTutorialTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TcaTutorialTests;
+			sourceTree = "<group>";
+		};
 		BD99B2592DC7971C009229E9 /* TcaTutorial */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -36,6 +52,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BD1770E92DC8CB1E00141F17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BD99B2542DC7971C009229E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				BD99B2592DC7971C009229E9 /* TcaTutorial */,
+				BD1770ED2DC8CB1E00141F17 /* TcaTutorialTests */,
 				BD99B2582DC7971C009229E9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				BD99B2572DC7971C009229E9 /* TcaTutorial.app */,
+				BD1770EC2DC8CB1E00141F17 /* TcaTutorialTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +91,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BD1770EB2DC8CB1E00141F17 /* TcaTutorialTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD1770F22DC8CB1E00141F17 /* Build configuration list for PBXNativeTarget "TcaTutorialTests" */;
+			buildPhases = (
+				BD1770E82DC8CB1E00141F17 /* Sources */,
+				BD1770E92DC8CB1E00141F17 /* Frameworks */,
+				BD1770EA2DC8CB1E00141F17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD1770F12DC8CB1E00141F17 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BD1770ED2DC8CB1E00141F17 /* TcaTutorialTests */,
+			);
+			name = TcaTutorialTests;
+			packageProductDependencies = (
+			);
+			productName = TcaTutorialTests;
+			productReference = BD1770EC2DC8CB1E00141F17 /* TcaTutorialTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BD99B2562DC7971C009229E9 /* TcaTutorial */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD99B2652DC7971D009229E9 /* Build configuration list for PBXNativeTarget "TcaTutorial" */;
@@ -99,6 +147,10 @@
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					BD1770EB2DC8CB1E00141F17 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = BD99B2562DC7971C009229E9;
+					};
 					BD99B2562DC7971C009229E9 = {
 						CreatedOnToolsVersion = 16.2;
 					};
@@ -122,11 +174,19 @@
 			projectRoot = "";
 			targets = (
 				BD99B2562DC7971C009229E9 /* TcaTutorial */,
+				BD1770EB2DC8CB1E00141F17 /* TcaTutorialTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BD1770EA2DC8CB1E00141F17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BD99B2552DC7971C009229E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,6 +197,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BD1770E82DC8CB1E00141F17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BD99B2532DC7971C009229E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,7 +213,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BD1770F12DC8CB1E00141F17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD99B2562DC7971C009229E9 /* TcaTutorial */;
+			targetProxy = BD1770F02DC8CB1E00141F17 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		BD1770F32DC8CB1E00141F17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U6NUHA5DNR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Union.TcaTutorialTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TcaTutorial.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TcaTutorial";
+			};
+			name = Debug;
+		};
+		BD1770F42DC8CB1E00141F17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U6NUHA5DNR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Union.TcaTutorialTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TcaTutorial.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TcaTutorial";
+			};
+			name = Release;
+		};
 		BD99B2632DC7971D009229E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -327,6 +438,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BD1770F22DC8CB1E00141F17 /* Build configuration list for PBXNativeTarget "TcaTutorialTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD1770F32DC8CB1E00141F17 /* Debug */,
+				BD1770F42DC8CB1E00141F17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BD99B2522DC7971B009229E9 /* Build configuration list for PBXProject "TcaTutorial" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
